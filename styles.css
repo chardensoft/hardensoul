@@ -135,6 +135,10 @@ form {
   padding-left: 50px;
 }
 
+.comp_link:hover {
+  cursor: pointer;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 }
