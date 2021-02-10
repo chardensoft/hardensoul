@@ -131,6 +131,10 @@ form {
   cursor: pointer;
 }
 
+.activities {
+  padding-left: 50px;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 }
