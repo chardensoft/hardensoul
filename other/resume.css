@@ -1,0 +1,49 @@
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #5995DA;
+}
+.list {
+  float: left;
+}
+.links {
+  display: block;
+  padding: 15px;
+  color: white;
+  background-color: #5995DA;
+}
+.links:hover,
+.links:visited:hover {
+  color: yellow;
+}
+h1 {
+  width: 600px;
+  margin: auto;
+  padding: 15px;
+  color: green;
+}
+h2 {
+  color: orange;
+}
+.about, .projects, .work, .contactme {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about {
+  font-size: 1.2em;
+}
+.projects, .work {
+  font-size: 1.5em;
+}
+a {
+  color: blue;
+}
+a:hover, 
+a:visited:hover {
+  color: red;
+}
+.bottom {
+  height: 1000px;
+}

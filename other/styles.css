@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA;  /* Blue */
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  margin: auto
+}
+.sd {
+  max-height: 50px;
+  margin: auto;
+}
+.date {
+  margin: auto;
+}
+.linklist {
+  display: flex;
+  margin: auto;
+}
+a {
+  color: red;
+}
+a:hover, a:visited:hover {
+  color: blue;
+}
+.signup, 
+.portfolio,
+.login {
+  color: white;
+}
+
+.signup:hover,
+.portfolio:hover,
+.login:hover {
+  color: red;
+}
+.portfolio, 
+.login {
+  margin-left: 20px;
+}
+.content-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+h1, h2, h3 {
+  text-align: center;
+  padding: 15px;
+}
+.content {
+  display: flex;
+  padding: 20px;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #5995DA;
+}
+.list {
+  float: left;
+}
+.links {
+  display: block;
+  padding: 15px;
+  color: white;
+  background-color: #5995DA;
+}
+.links:hover,
+.links:visited:hover {
+  color: yellow;
+}
+h4 {
+  text-align: center;
+  color: green;
+  padding: 10px;
+}
+h2 {
+  color: orange;
+}
+.about, .projects, .work, .contactme {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about {
+  font-size: 1.2em;
+}
+.projects, .work {
+  font-size: 1.5em;
+}
+.bottom {
+  height: 200px;
+}
+
+.resume {
+  padding: 0 50px 0 50px;
+}
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+}
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+.menu-container, .subscribe {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+}
+
