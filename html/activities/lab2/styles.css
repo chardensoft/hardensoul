@@ -130,3 +130,7 @@ a:hover, a:hover:visited {
     margin: 10px;
   }
 }
+
+.activities {
+  padding-left: 50px;
+}
