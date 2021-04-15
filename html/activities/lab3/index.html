@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>XKCD Browser</title>
+</head>
+
+<body>
+  <h1>XKCD Browser</h1>
+
+  <div id="app">
+    <div v-if="loading">
+      <p>Loading...</p>
+    </div>
+    <div v-else>
+      <p>
+        <button v-on:click="firstComic">First</button>
+        <button v-on:click="previousComic">Previous</button>
+        <button v-on:click="nextComic">Next</button>
+        <button v-on:click="lastComic">Last</button>
+        <button v-on:click="randomComic">Random</button>
+      </p>
+      <h2>{{current.safe_title}}</h2>
+      <img v-bind:src="current.img" v-bind:alt="current.alt">
+      <p>{{current.alt}}</p>
+      <p><i>#{{current.num}}, drawn on {{current.day}} {{month}} {{current.year}}</i></p>
+      <star-rating @rating-selected ="setRating" v-bind:increment="0.5" :show-rating="false" active-color="red"></star-rating>
+      <div v-if="rated">
+        <p>Average Rating: {{ratings[number].avg}}</p>
+      </div>
+      <h3>Add a Comment</h3>
+      <form v-on:submit.prevent="addComment">
+        <input v-model="addedName" placeholder="Name"></p>
+        <textarea v-model="addedComment"></textarea>
+        <br />
+        <button type="submit">Comment</button>
+      </form>
+      <h3>Comments</h3>
+      <div v-for="comment in comments[number]">
+        <hr>
+        <p>{{comment.text}}</p>
+        <p><i>-- {{comment.author}}</i> &nbsp;&nbsp;&nbsp;&nbsp;{{comment.date}}</p>
+      </div>
+    </div>
+  </div>
+
+  <h6 class = "bg-light">All Content Copyright Chris Harden<br><br>
+    <a href="https://github.com/BYU-CS-260-Winter-2021/lab-3a-vue-xkcd-browser-chardensoft" target = "_blank">Github link for website code</a>
+  </h6>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>`
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
